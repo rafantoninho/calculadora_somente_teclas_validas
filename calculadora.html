@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id='resultado'>0</p>
+
+<input type="text" onkeypress="myFunction(event)" >
+
+
+<script>
+function myFunction(teclapressionada) {
+    var x = teclapressionada.keyCode;
+
+    if (x==48){// zero sendo bloqueado
+        event.preventDefault();
+    }
+    document.getElementById('resultado').innerHTML = x;
+
+    console.log('tecla pressionada:' + x)
+}
+</script>
+
+</body>
+</html>
